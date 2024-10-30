@@ -22,4 +22,5 @@ server_scripts {
 
 files {
     "init.lua",
+    "lookupTables/*.json",
 }
