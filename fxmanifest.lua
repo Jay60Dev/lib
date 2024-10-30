@@ -5,10 +5,6 @@ lua54 'yes'
 author 'Jay60'
 version '1.0.0'
 
-ui_page "web/index.html"
-
-shared_script "@ox_lib/init.lua"
-
 shared_script "shared/init.lua"
 
 client_scripts {
