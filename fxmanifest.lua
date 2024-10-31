@@ -5,18 +5,21 @@ lua54 'yes'
 author 'Jay60'
 version '1.0.0'
 
-shared_script "shared/init.lua"
+shared_script {
+    "bridge/config.lua",
+    "shared/init.lua",
+}
 
 client_scripts {
-    "client/init.lua",
     "client/cache.lua",
     "modules/**/client.lua",
+    "bridge/modules/**/client.lua",
     "shared/finish.lua",
 }
 
 server_scripts {
-    "server/init.lua",
     "modules/**/server.lua",
+    "bridge/modules/**/server.lua",
     "shared/finish.lua",
 }
 

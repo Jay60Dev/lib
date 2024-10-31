@@ -1,3 +1,4 @@
+Config = Config or {}
 Lib = {}
 STORE = {}
 local Handlers = {}
@@ -53,4 +54,9 @@ Lib.LookupTable = function(resourceName, jsonFilePath, value)
     collectgarbage("collect")
 
     return result
+end
+
+IsStarted = function(resource)
+    Config.RenamedResources = Config.RenamedResources or {}
+    return GetResourceState(Config.RenamedResources[resource] or resource) == "started"
 end

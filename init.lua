@@ -6,11 +6,27 @@ local client = not server
 ---@field SpawnPed SpawnPedProps
 Lib = setmetatable({}, {
     __index = function(t, k)
-        return function(...)
-            return exports['lib'][k](exports['lib'], ...)
-        end
+        return setmetatable({}, {
+            __index = function(t2, k2)
+                return function(...)
+                    local lib = exports['lib']
+                    return lib[("%s.%s"):format(k, k2)](lib, ...)
+                end
+            end,
+            __call = function(t2, ...)
+                local lib = exports['lib']
+                return lib[k](lib, ...)
+            end,
+        })
     end,
-})
+})  
+-- Lib = setmetatable({}, {
+--     __index = function(t, k)
+--         return function(...)
+--             return exports['lib'][k](exports['lib'], ...)
+--         end
+--     end,
+-- })
 
 if client then
     Cache = Lib.Cache() or {}
@@ -19,6 +35,7 @@ if client then
         Cache[key] = value
     end)
 end
+
 
 local _print = print
 
