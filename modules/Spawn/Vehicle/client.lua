@@ -67,7 +67,6 @@ Lib.SpawnVehicle = function(data)
 
     if data.windowTint then
         local num = type(data.windowTint) == "number" and data.windowTint or Lib.LookupTable(GetCurrentResourceName(), "lookupTables/windowTint.json", data.windowTint)
-        print("Setting window tint", num)
         SetVehicleWindowTint(vehicle, num)
     end
 

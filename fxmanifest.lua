@@ -11,13 +11,13 @@ client_scripts {
     "client/init.lua",
     "client/cache.lua",
     "modules/**/client.lua",
-    "client/finish.lua",
+    "shared/finish.lua",
 }
 
 server_scripts {
     "server/init.lua",
     "modules/**/server.lua",
-    "server/finish.lua",
+    "shared/finish.lua",
 }
 
 files {
