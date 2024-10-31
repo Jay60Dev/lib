@@ -53,12 +53,15 @@ local function convertFunctions(value)
 end
 
 print = function(...)
+    local toPrint = {}
     for i = 1, select("#", ...) do
         local value = select(i, ...)
         if type(value) == "table" then
-            _print(json.encode(convertFunctions(value), {indent = true, sort_keys = true}))
+            toPrint[#toPrint+1] = json.encode(convertFunctions(value), {indent = true, sort_keys = true})
         else
-            _print(convertFunctions(value))
+            toPrint[#toPrint+1] = convertFunctions(value)
         end
     end
+
+    _print(table.unpack(toPrint))
 end
