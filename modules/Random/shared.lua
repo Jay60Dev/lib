@@ -14,7 +14,6 @@ local function getAlphaNumeric()
     return Lib.Random.Chance(50) and getLetter() or getInteger()
 end
 
-
 Lib.Random = {
     Number = function(min, max)
         if not max then return math.random(min) end

@@ -62,11 +62,8 @@ end
 Config.ForceResource = Config.ForceResource or {}
 Config.RenamedResources = Config.RenamedResources or {}
 IsStarted = function(resourceType, resource)
-
     -- If the resource is renamed, use the renamed resource name
     local resourceName = Config.RenamedResources[resource] or resource
-
-    Config.ForceResource[resourceType] = Config.ForceResource[resourceType] or {}
 
     -- If the resource is forced to be a specific resource, use that resource name
     if Config.ForceResource[resourceType] then

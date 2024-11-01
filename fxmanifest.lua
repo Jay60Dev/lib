@@ -13,6 +13,7 @@ shared_script {
 client_scripts {
     "modules/**/shared.lua",
     "modules/**/client.lua",
+    "bridge/modules/**/shared.lua",
     "bridge/modules/**/client.lua",
     "shared/finish.lua",
 }
@@ -20,6 +21,7 @@ client_scripts {
 server_scripts {
     "modules/**/shared.lua",
     "modules/**/server.lua",
+    "bridge/modules/**/shared.lua",
     "bridge/modules/**/server.lua",
     "shared/finish.lua",
 }
