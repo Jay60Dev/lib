@@ -1,16 +1,33 @@
 local server = IsDuplicityVersion()
 local client = not server
 
+local localFunctions = {
+    NUI = {
+        Send = function(data, focus, keepInput)
+            SetNuiFocus(focus, focus)
+            SetNuiFocusKeepInput(keepInput)
+            SendNUIMessage(data)
+        end,
+        Callback = RegisterNUICallback,
+    }
+}
+
 ---@class LibProps
 ---@field SpawnVehicle SpawnVehicleProps
 ---@field SpawnPed SpawnPedProps
-Lib = setmetatable({}, {
+Lib = setmetatable(localFunctions, {
     __index = function(t, k)
+
+        if rawget(t, k) then
+            return rawget(t, k)
+        end
+
         return setmetatable({}, {
             __index = function(t2, k2)
                 return function(...)
                     local lib = exports['lib']
-                    return lib[("%s.%s"):format(k, k2)](lib, ...)
+                    local modulePath = ("%s.%s"):format(k, k2)
+                    return lib[modulePath](lib, ...)
                 end
             end,
             __call = function(t2, ...)
@@ -19,49 +36,13 @@ Lib = setmetatable({}, {
             end,
         })
     end,
-})  
--- Lib = setmetatable({}, {
---     __index = function(t, k)
---         return function(...)
---             return exports['lib'][k](exports['lib'], ...)
---         end
---     end,
--- })
+})
 
 if client then
     Cache = Lib.Cache() or {}
-
     RegisterNetEvent("lib:cache:update", function(key, value, oldValue)
         Cache[key] = value
     end)
 end
 
-
-local _print = print
-
-local function convertFunctions(value)
-    if type(value) == "function" then
-        return "**Function**"
-    elseif type(value) == "table" then
-        local newTable = {}
-        for k, v in pairs(value) do
-            newTable[k] = convertFunctions(v)
-        end
-        return newTable
-    end
-    return value
-end
-
-print = function(...)
-    local toPrint = {}
-    for i = 1, select("#", ...) do
-        local value = select(i, ...)
-        if type(value) == "table" then
-            toPrint[#toPrint+1] = json.encode(convertFunctions(value), {indent = true, sort_keys = true})
-        else
-            toPrint[#toPrint+1] = convertFunctions(value)
-        end
-    end
-
-    _print(table.unpack(toPrint))
-end
+print = Lib.Print

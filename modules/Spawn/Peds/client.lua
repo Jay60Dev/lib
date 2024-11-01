@@ -37,6 +37,9 @@ Lib.SpawnPed = function(data)
         end
     end
 
+    if data.targets and Lib.Target.AddEntity then
+        Lib.Target.AddEntity(ped, data.targets)
+    end
 
     return ped
 end

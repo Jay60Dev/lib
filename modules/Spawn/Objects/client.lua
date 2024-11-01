@@ -21,5 +21,9 @@ Lib.SpawnObject = function(data)
 
     FreezeEntityPosition(object, data.freeze)
 
+    if data.targets and Lib.Target.AddEntity then
+        Lib.Target.AddEntity(object, data.targets)
+    end
+
     return object
 end

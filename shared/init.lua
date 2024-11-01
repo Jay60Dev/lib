@@ -1,6 +1,7 @@
 Config = Config or {}
 Lib = {}
 STORE = {}
+Resources = {}
 local Handlers = {}
 
 local ResourceStop = function(resource)
@@ -39,6 +40,8 @@ AddStore = function(key, cb)
 end
 
 AddToStore = function(store, resource, data)
+    if not store then print("STORE is required, got nil") return end
+    if not resource then print("RESOURCE is required, got nil") return end
     if not STORE[store] then return print(("STORE %s does not exist"):format(store)) end
     STORE[store][resource] = STORE[store][resource] or {}
     STORE[store][resource][#STORE[store][resource]+1] = data
@@ -56,7 +59,24 @@ Lib.LookupTable = function(resourceName, jsonFilePath, value)
     return result
 end
 
-IsStarted = function(resource)
-    Config.RenamedResources = Config.RenamedResources or {}
-    return GetResourceState(Config.RenamedResources[resource] or resource) == "started"
+Config.ForceResource = Config.ForceResource or {}
+Config.RenamedResources = Config.RenamedResources or {}
+IsStarted = function(resourceType, resource)
+
+    -- If the resource is renamed, use the renamed resource name
+    local resourceName = Config.RenamedResources[resource] or resource
+
+    Config.ForceResource[resourceType] = Config.ForceResource[resourceType] or {}
+
+    -- If the resource is forced to be a specific resource, use that resource name
+    if Config.ForceResource[resourceType] then
+        local isThisResource = Config.ForceResource[resourceType] == resourceName
+        Resources[resourceType] = isThisResource and resourceName or Resources[resourceType]
+        return isThisResource
+    end
+
+    local isStarted = GetResourceState(resourceName) == "started"
+
+    Resources[resourceType] = isStarted and resourceName or Resources[resourceType]
+    return isStarted
 end

@@ -11,13 +11,14 @@ shared_script {
 }
 
 client_scripts {
-    "client/cache.lua",
+    "modules/**/shared.lua",
     "modules/**/client.lua",
     "bridge/modules/**/client.lua",
     "shared/finish.lua",
 }
 
 server_scripts {
+    "modules/**/shared.lua",
     "modules/**/server.lua",
     "bridge/modules/**/server.lua",
     "shared/finish.lua",

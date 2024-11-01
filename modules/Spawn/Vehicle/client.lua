@@ -70,5 +70,9 @@ Lib.SpawnVehicle = function(data)
         SetVehicleWindowTint(vehicle, num)
     end
 
+    if data.targets and Lib.Target.AddEntity then
+        Lib.Target.AddEntity(vehicle, data.targets)
+    end
+
     return vehicle
 end
