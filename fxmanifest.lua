@@ -5,8 +5,10 @@ lua54 'yes'
 author 'Jay60'
 version '1.0.0'
 
+server_script "@oxmysql/lib/MySQL.lua"
+
 shared_script {
-    "bridge/config.lua",
+    "config.lua",
     "shared/init.lua",
 }
 

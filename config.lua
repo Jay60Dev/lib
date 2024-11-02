@@ -1,5 +1,15 @@
 Config = {
 
+    Commands = {
+        citizenid = { enabled = true},
+        routingbucket = { enabled = true },
+        resetbucket = { enabled = true, permission = "admin" },
+    },
+
+    --------------------------------------------------------------------------
+    ---                   BRIDGE CONFIGURATION SETTINGS                    ---
+    --------------------------------------------------------------------------
+
     -- If you want to override the auto check for a resource, add it here.
     -- This will ensure that the resource is always loaded for the specified resource type.
     -- set to false to use the auto check.
@@ -8,6 +18,9 @@ Config = {
         Inventory = false,
         Target = false,
         Notify = false,
+        Menu = false,
+        Input = false,
+        Keys = false,
     },
 
     -- Only use this if you have renamed any resources. Follow this format.
