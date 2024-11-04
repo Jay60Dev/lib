@@ -1,0 +1,1 @@
+Lib.Loop=function(a,b,...)local c={...}local d,e=b or 0,0;local f=GetGameTimer()if type(b)=="table"then d=b.timer;e=b.timeout end;CreateThread(function()while true do a(table.unpack(c))if e>0 and GetGameTimer()-f>e then break end;Wait(d)end end)end

@@ -1,0 +1,1 @@
+if not IsStarted("Input","ox_lib")then return end;local a=exports.ox_lib;Lib.Input=function(b,c)return a.inputDialog(b,c)end

@@ -1,0 +1,1 @@
+local a=function(b,c,...)return Lib.Callback("Lib:Client:Trigger",c,b,"PerformOnPlayerPed",...)end;local d={"AddHealth","RemoveHealth","SetHealth","AddArmour","RemoveArmour","SetArmour"}for e,f in ipairs(d)do Lib[f]=function(c,...)return a(f,c,...)end end

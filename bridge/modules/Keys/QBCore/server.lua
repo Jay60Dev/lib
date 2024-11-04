@@ -1,0 +1,1 @@
+if not IsStarted("Keys","qb-vehiclekeys")then return end;local a=exports["qb-vehiclekeys"]local b=function(c)return GetVehicleNumberPlateText(c)end;Lib.Keys={Give=function(d,c)a:GiveKeys(d,b(c))end,Remove=function(d,c)a:RemoveKeys(d,b(c))end,Has=function(d,c)return a:HasKeys(d,b(c))end}

@@ -1,0 +1,1 @@
+if not IsStarted("Menu","ox_lib")then return end;local a=exports.ox_lib;Lib.Menu=function(b)if not(b.id and b.title)then return print("Menu requires an id and title.")end;a:registerContext(b)a:showContext(b.id)end

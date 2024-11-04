@@ -1,0 +1,1 @@
+AddStore("EVENTS",RemoveEventHandler)Lib.RNE=function(a,b)local c=GetInvokingResource()if not(STORE.EVENTS and STORE.EVENTS[c]and STORE.EVENTS[c][a])then RegisterNetEvent(a)end;local d=AddEventHandler(a,b)AddToStore("EVENTS",c,d)return d end;Lib.TE=TriggerEvent;Lib[Server and"TCE"or"TSE"]=function(a,...)local d=Server and TriggerClientEvent or TriggerServerEvent;d(a,...)end

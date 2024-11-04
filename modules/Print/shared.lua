@@ -1,0 +1,1 @@
+local function a(b)if type(b)=="function"then return"**Function**"elseif type(b)=="table"then local c={}for d,e in pairs(b)do c[d]=a(e)end;return c end;return b end;Lib.Print=function(...)local f={}for g=1,select("#",...)do local b=select(g,...)if type(b)=="table"then f[#f+1]=json.encode(a(b),{indent=true,sort_keys=true})else f[#f+1]=a(b)end end;print(table.unpack(f))end
