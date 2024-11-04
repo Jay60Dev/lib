@@ -1,0 +1,1 @@
+if not IsStarted("Fuel","ox_fuel")then return end;local a=exports['ox_fuel']Lib.Fuel={Get=function(b)if not DoesEntityExist(b)then return end;return Entity(b).state.fuel end,Set=function(b,c)if not DoesEntityExist(b)then return end;Entity(b).state.fuel=c;return Entity(b).state.fuel end}

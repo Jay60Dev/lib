@@ -1,5 +1,7 @@
 Config = {
 
+    ShowResourcesAtStartup = true, -- Show the resources that are being used at startup in the server console.
+
     -- Progress options may not work with all progress bars. Certainly works with ox_lib.
     Progress = {
         Circle = true, -- Use the circle progress bar instead of the default bar.
@@ -30,6 +32,7 @@ Config = {
         Keys = false,
         Zones = false,
         Progress = false,
+        Fuel = false,
     },
 
     -- Only use this if you have renamed any resources. Follow this format.

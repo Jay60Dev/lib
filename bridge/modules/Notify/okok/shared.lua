@@ -1,0 +1,1 @@
+if not IsStarted("Notify","okokNotify")then return end;if Server then Lib.Notify=function(a,b,c,d)TriggerClientEvent('okokNotify:Alert',a,nil,b,d,c)end else Lib.Notify=function(b,c,d)exports['okokNotify']:Alert(nil,b,d,c)end end
