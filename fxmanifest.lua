@@ -4,6 +4,8 @@ lua54 'yes'
 author 'Jay60'
 version '1.0.0'
 
+ui_page "web/index.html"
+
 server_script "@oxmysql/lib/MySQL.lua"
 
 shared_scripts {
@@ -30,4 +32,5 @@ server_scripts {
 files {
     "init.lua",
     "lookupTables/*.json",
+    "web/**/*",
 }

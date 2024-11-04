@@ -1,5 +1,11 @@
 Config = {
 
+    -- Progress options may not work with all progress bars. Certainly works with ox_lib.
+    Progress = {
+        Circle = true, -- Use the circle progress bar instead of the default bar.
+        ForcePosition = "middle", -- false, "middle", "bottom"
+    },
+
     Commands = {
         citizenid = { enabled = true},
         routingbucket = { enabled = true },
@@ -23,6 +29,7 @@ Config = {
         Input = false,
         Keys = false,
         Zones = false,
+        Progress = false,
     },
 
     -- Only use this if you have renamed any resources. Follow this format.
