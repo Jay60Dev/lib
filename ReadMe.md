@@ -16,7 +16,7 @@ Upon importing, you gain access to two global objects: **Lib** and **Cache**.
 ## Lib
 <details>
 <summary>
-Audio Functions
+Audio
 </summary>
 The `Lib.Audio` functions handle .ogg file playback. These are **client-side only**.
 
@@ -50,7 +50,7 @@ The `Lib.Audio` functions handle .ogg file playback. These are **client-side onl
 
 <details>
 <summary>
-Blip Functions
+Blip
 </summary>
 
 The `Lib.Blip` functions manage map blips and are **client-side only**.
@@ -144,7 +144,7 @@ Lib.Command(commandName: string, function(source: number, args: table), config?:
 </details>
 <details>
 <summary>
-Coordinates Functions
+Coordinates
 </summary>
 
 #### GetEntityCoords
@@ -206,7 +206,7 @@ Lib.Database.Update(databaseTable: string, columnValues: table<string, any>, whe
 </details>
 <details>
 <summary>
-Health and Armour Functions
+Health and Armour
 </summary>
 
 The `Lib` module provides functions to manage health and armor values for entities. All functions return a boolean indicating success and may return an error message if conditions are not met. These functions can be used both on the client and server. On the server, use the player’s ID in place of the `entity`.
@@ -430,7 +430,7 @@ print("Power buildup duration:", powerDuration)
 </details>
 <details>
 <summary>
-Print Function
+Print
 </summary>
 
 The `Lib.Print` function is designed to print variables, handling both standard values and tables gracefully. It converts functions within tables to a string representation for clearer logging and outputs the results in a structured format.
