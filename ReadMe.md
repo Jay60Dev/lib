@@ -14,8 +14,10 @@ Upon importing, you gain access to two global objects: **Lib** and **Cache**.
 - **Cache**: Provides quick access to frequently used player-related data.
 
 ## Lib
-
-### Audio Functions
+<details>
+<summary>
+Audio Functions
+</summary>
 The `Lib.Audio` functions handle .ogg file playback. These are **client-side only**.
 
 - **Play**: Plays an audio file with optional configurations.
@@ -44,8 +46,12 @@ The `Lib.Audio` functions handle .ogg file playback. These are **client-side onl
   ```lua
   Lib.Audio.StopAll()
   ```
+</details>
 
-### Blip Functions
+<details>
+<summary>
+Blip Functions
+</summary>
 
 The `Lib.Blip` functions manage map blips and are **client-side only**.
 
@@ -65,8 +71,11 @@ The `Lib.Blip` functions manage map blips and are **client-side only**.
   ```lua
   Lib.DeleteBlip(blip: number)
   ```
-
-### Cache
+</details>
+<details>
+<summary>
+Cache
+</summary>
 
 The `Cache` object provides frequently accessed data for the player. These values are **client-side only**.
 
@@ -84,8 +93,11 @@ Lib.CacheChange("weapon", function(weapon: number, oldWeapon: number)
     print(("Weapon changed from: %s to %s"):format(oldWeapon, weapon))
 end)
 ```
-
-### Callbacks
+</details>
+<details>
+<summary>
+Callbacks
+</summary>
 
 `Lib` provides both client and server callbacks.
 
@@ -110,8 +122,11 @@ end)
   ```lua
   local result = Lib.Callback(name: string, id: number, ...)
   ```
-
-### Commands
+</details>
+<details>
+<summary>
+Commands
+</summary>
 
 Commands can be registered on both the client and server.
 
@@ -126,7 +141,11 @@ Lib.Command(commandName: string, function(source: number, args: table), config?:
 - `adminOnly?`: Set to `true` to restrict to admin users.
 - `hideSuggestions?`: Set to `true` to prevent suggestions in chat.
 
-### Coordinates Functions
+</details>
+<details>
+<summary>
+Coordinates Functions
+</summary>
 
 #### GetEntityCoords
 Retrieves the coordinates of an entity, either as a specified entity reference or as `vector3`/`vector4` coordinates.
@@ -151,6 +170,12 @@ Lib.GetOffset(coords: vector4, offset: vector3): vector4
 
 - **Returns**: A `vector4` containing the new coordinates after applying the offset.
 ### Database Functions (Server Only)
+
+</details>
+<details>
+<summary>
+Database
+</summary>
 
 The `Lib.Database` module provides helper functions for interacting with the database.
 
@@ -178,8 +203,11 @@ Lib.Database.Update(databaseTable: string, columnValues: table<string, any>, whe
 - `where`: A table of column names and values to match for the `WHERE` clause.
 
 - **Returns**: The result of the update operation (number) or `nil` if there’s an error. If an error occurs, it will be printed to the console.
-
-### Health and Armour Functions
+</details>
+<details>
+<summary>
+Health and Armour Functions
+</summary>
 
 The `Lib` module provides functions to manage health and armor values for entities. All functions return a boolean indicating success and may return an error message if conditions are not met. These functions can be used both on the client and server. On the server, use the player’s ID in place of the `entity`.
 
@@ -272,7 +300,12 @@ Lib.SetArmour(entity: number, amount: number): boolean, string | nil
   - `true` if successful.
   - `false`, `"Entity must be a ped"` if the entity is not a ped.
   - `false`, `"Amount of armour to set, must be a number"` if `amount` is not a number.
-### Loop
+
+</details>
+<details>
+<summary>
+Loop
+</summary>
 
 `Lib.Loop` provides a way to repeatedly execute a callback function with optional timing and stopping conditions. This function can run either in a separate thread or in the current execution context.
 Available on both client and server
@@ -312,8 +345,11 @@ In this example:
 - It will stop if the player enters a vehicle or after 5 seconds, whichever comes first.
 - The loop runs in a separate thread due to `thread = true`.
 
-
-### Player Events
+</details>
+<details>
+<summary>
+Player Events
+</summary>
 
 The `Lib` library provides two key functions to handle player state events: `Lib.OnPlayerLoaded` and `Lib.OnPlayerUnloaded`. These allow developers to register callbacks that trigger when a player is loaded or unloaded, with a built-in cooldown to prevent multiple triggers within a short period.
 
@@ -348,8 +384,11 @@ end)
 - **Server & Client**: These functions are available on both the client and server sides, depending on where they are registered.
 
 With this setup, your code can now reliably respond to player load and unload events without worrying about excessive triggers.
-
-### Power Buildup
+</details>
+<details>
+<summary>
+Power Buildup
+</summary>
 
 The `Lib.PowerBuildup` function allows the player to hold down a specified control key to build up a "power" value, calculated by how long the key is held. The function displays the current buildup and returns the final power when the key is released. This function can be used for actions like charging attacks or determining intensity based on hold duration.
 
@@ -388,8 +427,11 @@ print("Power buildup duration:", powerDuration)
 
 #### Notes
 - **Text Display**: The `Lib.DrawText` function is used to display the buildup status.
-
-### Print Function
+</details>
+<details>
+<summary>
+Print Function
+</summary>
 
 The `Lib.Print` function is designed to print variables, handling both standard values and tables gracefully. It converts functions within tables to a string representation for clearer logging and outputs the results in a structured format.
 
@@ -429,7 +471,11 @@ Lib.Print("Logging values:", exampleTable)
 4. **Output**: 
    - Prints all processed values to the console, ensuring that each value is human-readable.
 
-### Random Number Generation
+</details>
+<details>
+<summary>
+Random Generation
+</summary>
 
 The `Lib.Random` module provides utility functions for generating random values, including numbers, letters, and strings based on specific patterns. This can be useful for various gameplay mechanics, such as random loot drops, name generation, and more.
 
@@ -515,8 +561,11 @@ print("Random String:", randomString)
 
 4. **String Generation**: 
    - Constructs a string based on the given pattern and length, using the defined character types for generation.
-
-### Spawn Object
+   </details>
+<details>
+<summary>
+Spawn Object
+</summary>
 
 The `Lib.SpawnObject` function allows developers to create and manage game objects within the environment. It provides the ability to specify model, coordinates, and various properties related to the spawned object.
 
@@ -570,3 +619,4 @@ print("Spawned Object:", spawnedObject)
 
 7. **Targeting**: 
    - If `data.targets` is provided and `Lib.Target.AddEntity` is available, it adds targeting capabilities to the spawned object.
+</details>
