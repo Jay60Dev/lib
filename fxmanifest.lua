@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
 author 'Jay60'
-version '0.000021'
+version '0.000022'
 
 ui_page "web/index.html"
 
