@@ -1,0 +1,1 @@
+if not IsMissing("Fuel","ti_fuel")then return end;local a=exports['ti_fuel']Lib.Fuel={Get=function(b)if not DoesEntityExist(b)then return end;return a:getFuel(b)end,Set=function(b,c)if not DoesEntityExist(b)then return end;return a:setFuel(b,c)end}

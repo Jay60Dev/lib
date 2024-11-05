@@ -1,1 +1,1 @@
-if not IsStarted("Notify","qbx_core")then return end;local a=exports.qbx_core;if Server then Lib.Notify=function(b,c,d,e)a:Notify(b,c,d,e)end else Lib.Notify=function(c,d,e)a:Notify(c,d,e)end end
+if not IsMissing("Notify","qbx_core")then return end;local a=exports.qbx_core;if Server then Lib.Notify=function(b,c,d,e)a:Notify(b,c,d,e)end else Lib.Notify=function(c,d,e)a:Notify(c,d,e)end end

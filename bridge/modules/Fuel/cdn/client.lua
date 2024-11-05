@@ -1,1 +1,1 @@
-if not IsStarted("Fuel","cdn-fuel")then return end;local a=exports['cdn-fuel']Lib.Fuel={Get=function(b)if not DoesEntityExist(b)then return end;return a:GetFuel(b)end,Set=function(b,c)if not DoesEntityExist(b)then return end;return a:SetFuel(b,c)end}
+if not IsMissing("Fuel","cdn-fuel")then return end;local a=exports['cdn-fuel']Lib.Fuel={Get=function(b)if not DoesEntityExist(b)then return end;return a:GetFuel(b)end,Set=function(b,c)if not DoesEntityExist(b)then return end;return a:SetFuel(b,c)end}

@@ -1,1 +1,1 @@
-if not IsStarted("Keys","qbx_vehiclekeys")then return end;local a=exports.qbx_vehiclekeys;Lib.Keys={Give=function(b,c)a:GiveKeys(b,c)end,Remove=function(b,c)a:RemoveKeys(b,c)end,Has=function(b,c)return a:HasKeys(b,c)end}
+if not IsMissing("Keys","qbx_vehiclekeys")then return end;local a=exports.qbx_vehiclekeys;Lib.Keys={Give=function(b,c)a:GiveKeys(b,c)end,Remove=function(b,c)a:RemoveKeys(b,c)end,Has=function(b,c)return a:HasKeys(b,c)end}

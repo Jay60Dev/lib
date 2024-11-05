@@ -1,6 +1,8 @@
 Config = {
 
-    ShowResourcesAtStartup = true, -- Show the resources that are being used at startup in the server console.
+    ShowResourcesAtStartup = false, -- Show the resources that are being used at startup in the server console.
+    -- Below only works if ShowResourcesAtStartup is set to false.
+    ShowMissingResourcesAtStartup = true, -- Show the resources that are missing at startup in the server console.
 
     -- Progress options may not work with all progress bars. Certainly works with ox_lib.
     Progress = {
