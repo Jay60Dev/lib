@@ -1,1 +1,1 @@
-if not IsMissing("Keys","qb-vehiclekeys")then return end;local a=exports["qb-vehiclekeys"]local b=function(c)return GetVehicleNumberPlateText(c)end;Lib.Keys={Give=function(d,c)a:GiveKeys(d,b(c))end,Remove=function(d,c)a:RemoveKeys(d,b(c))end,Has=function(d,c)return a:HasKeys(d,b(c))end}
+if not IsMissing("Keys","qb-vehiclekeys")then return end;local a=exports["qb-vehiclekeys"]Lib.Keys={Give=function(b,c)a:GiveKeys(source,Lib.GetPlate(b,c))end,Remove=function(b,c)a:RemoveKeys(source,Lib.GetPlate(b,c))end,Has=function(b,c)return a:HasKeys(source,Lib.GetPlate(b,c))end}

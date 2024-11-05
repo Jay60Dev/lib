@@ -1,1 +1,1 @@
-if not IsMissing("Progress","ox_lib")then return end;Lib.Progress=function(a)a.position=Config.Progress.ForcePosition or a.position;local b=Config.Progress.Circle and lib.progressCircle or lib.progressBar;return b(a)end
+if not IsMissing("Progress","ox_lib")then return end;Lib.Progress=function(a,b)b.position=Config.Progress.ForcePosition or b.position;local c=Config.Progress.Circle and lib.progressCircle or lib.progressBar;return c(b)end

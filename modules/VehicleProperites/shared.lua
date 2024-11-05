@@ -1,0 +1,1 @@
+Lib.VehicleProperties=Lib.VehicleProperties or{}Lib.FixPlateString=function(a,b)return b:gsub(' ','')end;Lib.GetPlate=function(a,c)return Lib.FixPlateString(a,GetVehicleNumberPlateText(c))end

@@ -35,6 +35,7 @@ Config = {
         Zones = false,
         Progress = false,
         Fuel = false,
+        DrawText = false,
     },
 
     -- Only use this if you have renamed any resources. Follow this format.

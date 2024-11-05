@@ -1,1 +1,1 @@
-if not IsMissing("Fuel","ox_fuel")then return end;local a=exports['ox_fuel']Lib.Fuel={Get=function(b)if not DoesEntityExist(b)then return end;return Entity(b).state.fuel end,Set=function(b,c)if not DoesEntityExist(b)then return end;Entity(b).state.fuel=c;return Entity(b).state.fuel end}
+if not IsMissing("Fuel","ox_fuel")then return end;local a=exports['ox_fuel']Lib.Fuel={Get=function(b,c)if not DoesEntityExist(c)then return end;return Entity(c).state.fuel end,Set=function(b,c,d)if not DoesEntityExist(c)then return end;Entity(c).state.fuel=d;return Entity(c).state.fuel end}
