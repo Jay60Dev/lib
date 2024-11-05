@@ -1,1 +1,1 @@
-Lib.Fetch=function(a)local b=promise.new()PerformHttpRequest(a,function(c,d,e)if c==200 then b:resolve(json.decode(d))else b:resolve(nil)end end,"GET","",{["Content-Type"]="application/json"})return Citizen.Await(b)end;Lib.Print(nil,Lib.Fetch("https://api.github.com/repos/Jay60Dev/lib/tags"))
+Lib.Fetch=function(a,b)local c=promise.new()PerformHttpRequest(b,function(d,e,f)if d==200 then c:resolve(json.decode(e))else c:resolve(nil)end end,"GET","",{["Content-Type"]="application/json"})return Citizen.Await(c)end
