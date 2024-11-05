@@ -5,7 +5,7 @@ Config = {
     -- Progress options may not work with all progress bars. Certainly works with ox_lib.
     Progress = {
         Circle = true, -- Use the circle progress bar instead of the default bar.
-        ForcePosition = "middle", -- false, "middle", "bottom"
+        ForcePosition = "bottom", -- false, "middle", "bottom"
     },
 
     Commands = {
