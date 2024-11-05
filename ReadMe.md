@@ -1,5 +1,3 @@
----
-
 # Library Documentation
 
 ## Importing the Library
