@@ -40,24 +40,24 @@ export default {
         }
 
     },
-    pause: function (resource, fileName, options) {
+    pause: function (resource, fileName) {
         if (playing[fileName]) {
             playing[fileName].pause();
         }
     },
-    stop: function (resource, fileName, options) {
+    stop: function (resource, fileName) {
         if (playing[fileName]) {
             playing[fileName].pause();
             delete playing[file];
         }
     },
-    stopAll: function (resource, fileName, options) {
+    stopAll: function (resource) {
         for (let file in playing) {
             playing[file].pause();
             delete playing[file];
         }
     },
-    stopResource: function (resource, fileName, options) {
+    stopResource: function (resource) {
         for (let file in playing) {
             if (playing[file].dataset.resource === resource) {
                 playing[file].pause();

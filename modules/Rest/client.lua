@@ -1,0 +1,1 @@
+Lib.Fetch=function(a,b)local c,d=Lib.Callback(GetCurrentResourceName(),"lib:doFetch",b)if d then print(d)end;return c end
