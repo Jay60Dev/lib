@@ -1,0 +1,1 @@
+Lib.GetCoordsFromIdEntityOrCoords=function(a)local b=type(a)if b=="vector3"then return a end;if b=="vector4"then return vector3(a.x,a.y,a.z)end;local c=a;if b=="number"then if not DoesEntityExist(a)then c=GetPlayerPed(a)end end;if not DoesEntityExist(c)then return vector3(0,0,0),print("Could not get coords")end;return GetEntityCoords(c)end

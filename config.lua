@@ -1,6 +1,6 @@
 Config = {
 
-    ShowResourcesAtStartup = false, -- Show the resources that are being used at startup in the server console.
+    ShowResourcesAtStartup = true, -- Show the resources that are being used at startup in the server console.
     -- Below only works if ShowResourcesAtStartup is set to false.
     ShowMissingResourcesAtStartup = true, -- Show the resources that are missing at startup in the server console.
 
@@ -43,6 +43,7 @@ Config = {
     -- VALUE: The original resource name.
     RenamedResources = {
         ["my_target"] = "ox_target",
+        sleepless_interact = "Doing_This_To_Disable_As_Currently_Awaiting_Changes_To_Sleepless_Interact",
     },
 
 }
