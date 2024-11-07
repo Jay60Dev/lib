@@ -1,0 +1,1 @@
+Lib.Nearby={Notify=function(a,b,...)return Lib.Callback(a,"lib:nearby:server",a,b,"Notify",...)end,ChatMessage=function(a,b,...)return Lib.Callback(a,"lib:nearby:server",a,b,"ChatMessage",...)end}
