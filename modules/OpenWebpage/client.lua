@@ -1,0 +1,1 @@
+Lib.OpenWebpage=function(a,b)if not b then return end;SendNUIMessage({module="OpenWebpage",action="open",url=b,resource=a})end

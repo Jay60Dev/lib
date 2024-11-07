@@ -1,1 +1,1 @@
-if not IsMissing("DrawText","ox_lib")then return end;local a=exports.ox_lib
+if not IsMissing("DrawText","ox_lib")then return end;Lib.DrawText=function(a,b)if not b then return lib.hideTextUI()end;lib.showTextUI(b)end

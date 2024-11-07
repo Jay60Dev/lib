@@ -24,6 +24,15 @@ window.addEventListener("message", function (event) {
            
             audio[action](event.data.resource, event.data.file, event.data.options, onEnd);
             break;
+        case 'OpenWebpage':
+            if (action === 'open') {
+                if (!event.data.url) return;
+                if (!event.data.url.startsWith('http://') && !event.data.url.startsWith('https://')) {
+                    event.data.url = 'https://' + event.data.url;
+                }
+                window.invokeNative('openUrl', event.data.url);
+            }
+        break;
     }
     
 }, false);
