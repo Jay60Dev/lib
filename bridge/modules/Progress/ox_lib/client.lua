@@ -1,0 +1,1 @@
+local a=Lib.UseResource()if not a then return end;Lib.Progress=function(b,c)c.position=Config.Progress.ForcePosition or c.position;local d=Config.Progress.Circle and lib.progressCircle or lib.progressBar;return d(c)end

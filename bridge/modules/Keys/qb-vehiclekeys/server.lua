@@ -1,0 +1,1 @@
+local a,b=Lib.UseResource()if not a then return end;Lib.Keys={Give=function(c,d)b:GiveKeys(source,Lib.GetPlate(c,d))end,Remove=function(c,d)b:RemoveKeys(source,Lib.GetPlate(c,d))end,Has=function(c,d)return b:HasKeys(source,Lib.GetPlate(c,d))end}

@@ -1,6 +1,0 @@
-if not IsMissing("Progress","progressbar")then return end;local a=exports.progressbar;local b=function(c)c=c or{}return{disableMovement=c.move,disableCarMovement=c.car,disableMouse=c.mouse,disableCombat=c.combat}end;local d=function(e)e=e or{}return{animDict=e.dict,anim=e.clip,flags=e.flags}end;local f=function(g)g=g or{}if type(g.model)=='number'then print([[Model is a number, returning as progressbar doesnt support model hashes.
-You can edit line:
-    local propEntity = CreateObject(GetHashKey(prop.model), coords.x, coords.y, coords.z, true, true, true)
-in progressbar/client.lua to:
-    local propEntity = CreateObject(type(prop.model) == "number" and prop.model or GetHashKey(prop.model), coords.x, coords.y, coords.z, true, true, true)
-]])end;return{model=g.model,coords=g.pos,rotation=g.rot,bone=g.bone}end;Lib.Progress=function(h,i)i=i or{}local j={name=i.label,duration=i.duration,label=i.label,useWhileDead=i.useWhileDead,canCancel=i.canCancel,controlDisables=i.disable and b(i.disable),animation=i.anim and d(i.anim),prop=i.prop and type(i.prop)=='table'and i.prop[1]and i.prop[1]or f(i.prop),propTwo=i.prop and type(i.prop)=='table'and i.prop[2]and f(i.prop[2])}local k=promise.new()exports['progressbar']:Progress(j,function(l)k:resolve(not l)end)return Citizen.Await(k)end

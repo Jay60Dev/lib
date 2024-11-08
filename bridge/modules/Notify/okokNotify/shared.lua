@@ -1,0 +1,1 @@
+local a=Lib.UseResource()if not a then return end;if Server then Lib.Notify=function(b,c,d,e,f)TriggerClientEvent('okokNotify:Alert',c,nil,d,f,e)end else Lib.Notify=function(b,d,e,f)TriggerEvent('okokNotify:Alert',nil,d,f,e)end end

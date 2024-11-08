@@ -1,1 +1,1 @@
-if not IsMissing("Fuel","x-fuel")then return end;local a=exports['x-fuel']Lib.Fuel={Get=function(b,c)if not DoesEntityExist(c)then return end;return a:GetFuel(c)end,Set=function(b,c,d)if not DoesEntityExist(c)then return end;return a:SetFuel(c,d)end}
+local a,b=Lib.UseResource()if not a then return end;Lib.Fuel={Get=function(c,d)if not DoesEntityExist(d)then return end;return b:GetFuel(d)end,Set=function(c,d,e)if not DoesEntityExist(d)then return end;return b:SetFuel(d,e)end}

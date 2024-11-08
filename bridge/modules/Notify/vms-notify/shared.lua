@@ -1,0 +1,1 @@
+local a=Lib.UseResource()if not a then return end;local b={info="#3498db",success="#2ecc71",error="#e74c3c",warning="#f1c40f"}if Server then Lib.Notify=function(c,d,e,f,g)TriggerClientEvent("vms_notify:Notification",d,nil,e,g,b[f])end else Lib.Notify=function(c,e,f,g)TriggerEvent("vms_notify:Notification",nil,e,g,b[f])end end

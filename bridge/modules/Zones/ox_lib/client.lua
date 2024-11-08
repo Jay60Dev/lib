@@ -1,0 +1,1 @@
+local a=Lib.UseResource()if not a then return end;AddStore("ZONES",function(b)b:remove()end)Lib.Zones={Poly=function(c,d)local e=lib.zones.poly(d)AddToStore("ZONES",c,e)return e end,Circle=function(c,d)local e=lib.zones.sphere(d)AddToStore("ZONES",c,e)return e end,Box=function(c,d)local e=lib.zones.box(d)AddToStore("ZONES",c,e)return e end}

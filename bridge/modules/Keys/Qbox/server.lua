@@ -1,1 +1,0 @@
-if not IsMissing("Keys","qbx_vehiclekeys")then return end;local a=exports.qbx_vehiclekeys;Lib.Keys={Give=function(b,c)a:GiveKeys(source,c)end,Remove=function(b,c)a:RemoveKeys(source,c)end,Has=function(b,c)return a:HasKeys(source,c)end}

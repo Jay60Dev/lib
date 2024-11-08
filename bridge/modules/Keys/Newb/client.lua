@@ -1,1 +1,0 @@
-if not IsMissing("Keys","MrNewbVehicleKeys")then return end;local a=exports.MrNewbVehicleKeys;Lib.Keys={Give=function(b,c)if not DoesEntityExist(c)then return end;return a:GiveKeys(c)end,Remove=function(b,c)if not DoesEntityExist(c)then return end;return a:RemoveKeys(c)end,Has=function(b,c)if not DoesEntityExist(c)then return end;return a:HaveKeys(c)end}

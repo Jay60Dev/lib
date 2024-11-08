@@ -1,1 +1,0 @@
-if not IsMissing("Fuel","ps-fuel")then return end;local a=exports['ps-fuel']Lib.Fuel={Get=function(b,c)if not DoesEntityExist(c)then return end;return a:GetFuel(c)end,Set=function(b,c,d)if not DoesEntityExist(c)then return end;return a:SetFuel(c,d)end}

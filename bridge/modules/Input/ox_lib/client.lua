@@ -1,0 +1,1 @@
+local a=Lib.UseResource()if not a then return end;Lib.Input=function(b,c,d)return lib.inputDialog(b,c,d)end

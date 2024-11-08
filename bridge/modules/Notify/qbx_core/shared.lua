@@ -1,0 +1,1 @@
+local a,b=Lib.UseResource()if not a then return end;if Server then Lib.Notify=function(c,d,e,f,g)b:Notify(d,e,f,g)end else Lib.Notify=function(c,e,f,g)b:Notify(e,f,g)end end

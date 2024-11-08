@@ -1,0 +1,1 @@
+local a,b=Lib.UseResource()if not a then return end;Lib.Keys={Give=function(c,d)if not DoesEntityExist(d)then return end;return b:GiveKeys(d)end,Remove=function(c,d)if not DoesEntityExist(d)then return end;return b:RemoveKeys(d)end,Has=function(c,d)if not DoesEntityExist(d)then return end;return b:HaveKeys(d)end}

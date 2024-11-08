@@ -1,0 +1,1 @@
+local a,b=Lib.UseResource()if not a then return end;Lib.Fuel={Get=function(c,d)if not DoesEntityExist(d)then return end;return Entity(d).state.fuel end,Set=function(c,d,e)if not DoesEntityExist(d)then return end;return b:SetFuel(d,e)end}

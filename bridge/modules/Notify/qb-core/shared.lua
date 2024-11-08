@@ -1,0 +1,1 @@
+local a=Lib.UseResource()if not a then return end;if Server then Lib.Notify=function(b,c,d,e,f)TriggerClientEvent('QBCore:Notify',c,d,e,f)end else Lib.Notify=function(b,d,e,f)TriggerEvent('QBCore:Notify',d,e,f)end end

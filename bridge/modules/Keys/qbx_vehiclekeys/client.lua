@@ -1,0 +1,1 @@
+local a,b=Lib.UseResource()if not a then return end;Lib.Keys={Give=function(c,d)local e=Lib.GetPlate(c,d)if not e then return print("Vehicle does not have a plate")end;TriggerServerEvent('qb-vehiclekeys:server:AcquireVehicleKeys',e)end,Remove=function(c,d)return print("Can only remove keys on the server")end,Has=function(c,d)return b:HasKeys(d)end}

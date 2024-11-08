@@ -1,1 +1,0 @@
-if not IsMissing("Zones","ox_lib")then return end;AddStore("ZONES",function(a)a:remove()end)Lib.Zones={Poly=function(b,c)local d=lib.zones.poly(c)AddToStore("ZONES",b,d)return d end,Circle=function(b,c)local d=lib.zones.sphere(c)AddToStore("ZONES",b,d)return d end,Box=function(b,c)local d=lib.zones.box(c)AddToStore("ZONES",b,d)return d end}

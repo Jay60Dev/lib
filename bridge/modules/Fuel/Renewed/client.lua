@@ -1,1 +1,0 @@
-if not IsMissing("Fuel","Renewed-Fuel")then return end;local a=exports['Renewed-Fuel']Lib.Fuel={Get=function(b,c)if not DoesEntityExist(c)then return end;return Entity(c).state.fuel end,Set=function(b,c,d)if not DoesEntityExist(c)then return end;return a:SetFuel(c,d)end}

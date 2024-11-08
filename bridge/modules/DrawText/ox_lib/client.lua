@@ -1,0 +1,1 @@
+local a=Lib.UseResource()if not a then return end;Lib.DrawText=function(b,c)if not c then return lib.hideTextUI()end;lib.showTextUI(c)end

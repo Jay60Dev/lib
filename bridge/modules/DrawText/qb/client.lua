@@ -1,1 +1,0 @@
-if not IsMissing("DrawText","qb-core")then return end;local a=exports["qb-core"]Lib.DrawText=function(b,c)if not c then return a:HideText()end;a:DrawText(c)end

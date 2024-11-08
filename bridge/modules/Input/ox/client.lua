@@ -1,1 +1,0 @@
-if not IsMissing("Input","ox_lib")then return end;local a=exports.ox_lib;Lib.Input=function(b,c,d)return a.inputDialog(b,c,d)end
