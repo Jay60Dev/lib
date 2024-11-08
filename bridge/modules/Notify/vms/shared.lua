@@ -1,0 +1,1 @@
+if not IsMissing("Notify","vms_notify")then return end;local a={info="#3498db",success="#2ecc71",error="#e74c3c",warning="#f1c40f"}if Server then Lib.Notify=function(b,c,d,e,f)TriggerClientEvent("vms_notify:Notification",c,nil,d,f,a[e])end else Lib.Notify=function(b,d,e,f)TriggerEvent("vms_notify:Notification",nil,d,f,a[e])end end

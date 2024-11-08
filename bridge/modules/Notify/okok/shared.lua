@@ -1,1 +1,1 @@
-if not IsMissing("Notify","okokNotify")then return end;if Server then Lib.Notify=function(a,b,c,d,e)TriggerClientEvent('okokNotify:Alert',b,nil,c,e,d)end else Lib.Notify=function(a,c,d,e)exports['okokNotify']:Alert(nil,c,e,d)end end
+if not IsMissing("Notify","okokNotify")then return end;if Server then Lib.Notify=function(a,b,c,d,e)TriggerClientEvent('okokNotify:Alert',b,nil,c,e,d)end else Lib.Notify=function(a,c,d,e)TriggerEvent('okokNotify:Alert',nil,c,e,d)end end
