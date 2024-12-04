@@ -1,0 +1,1 @@
+Shared.Switch=function(a,b,c)local d=c[b]if d then return d()end;local e=c.default;if e then return e()end end

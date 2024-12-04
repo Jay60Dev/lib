@@ -1,0 +1,1 @@
+Client.SkillCheck=function(a,b,c)Shared.MissingResource()end
