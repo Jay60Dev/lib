@@ -1,0 +1,1 @@
+Server.Revive=function(a,b)Shared.MissingResource()end

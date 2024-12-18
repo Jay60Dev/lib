@@ -1,0 +1,1 @@
+Client.SpawnPed=function(a,b)b.type="ped"assert(Client.assertEntityData(a,b))local c=Client.LoadModel(a,b.model)local d=vector4(b.coords.x,b.coords.y,b.coords.z,b.coords.w or 0.0)local e=b.networked or false;local f=CreatePed(4,c,d.x,d.y,d.z,d.w,e,false)AddToStore("ENTITIES",a,f)SetModelAsNoLongerNeeded(c)Client.SetEntityProperties(a,f,b)return f end

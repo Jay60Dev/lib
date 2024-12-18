@@ -1,0 +1,6 @@
+local a,b=Shared.UseResource()if not a then return end;local c=function(d)d=d or{}return{disableMovement=d.move or false,disableCarMovement=d.car or false,disableMouse=d.mouse or false,disableCombat=d.combat or false}end;local e=function(f)f=f or{}return{animDict=f.dict,anim=f.clip,flags=f.flags}end;local g=function(h)h=h or{}if type(h.model)=='number'then print([[Model is a number, returning as progressbar doesnt support model hashes.
+You can edit line:
+    local propEntity = CreateObject(GetHashKey(prop.model), coords.x, coords.y, coords.z, true, true, true)
+in progressbar/client.lua to:
+    local propEntity = CreateObject(type(prop.model) == "number" and prop.model or GetHashKey(prop.model), coords.x, coords.y, coords.z, true, true, true)
+]])end;return{model=h.model,coords=h.pos,rotation=h.rot,bone=h.bone}end;Client.Progress=function(i,j)j=j or{}local k={name=j.label,duration=j.duration,label=j.label,useWhileDead=j.useWhileDead,canCancel=j.canCancel,controlDisables=c(j.disable),animation=j.anim and e(j.anim),prop=j.prop and type(j.prop)=='table'and j.prop[1]and j.prop[1]or g(j.prop),propTwo=j.prop and type(j.prop)=='table'and j.prop[2]and g(j.prop[2])}local l=promise.new()b:Progress(k,function(m)l:resolve(not m)end)return Citizen.Await(l)end
