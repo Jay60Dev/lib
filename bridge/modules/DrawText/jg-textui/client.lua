@@ -1,0 +1,1 @@
+local a,b=Shared.UseResource()if not a then return end;Client.DrawText=function(c,d)if not d then return b:HideText()end;b:DrawText(d)end

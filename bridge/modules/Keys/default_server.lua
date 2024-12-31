@@ -1,0 +1,1 @@
+Server.Keys=Server.Keys or{}Server.Keys.Give=function(a,b,c)Shared.MissingResource()end;Server.Keys.Remove=function(a,b,c)Shared.MissingResource()end;Server.Keys.Has=function(a,b,c)Shared.MissingResource()end

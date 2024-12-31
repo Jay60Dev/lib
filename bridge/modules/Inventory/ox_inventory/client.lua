@@ -1,0 +1,1 @@
+local a,b=Shared.UseResource()if not a then return end

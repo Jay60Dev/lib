@@ -1,0 +1,1 @@
+local a=Shared.UseResource()if not a then return end;local b={easy={time=1000},medium={time=750},hard={time=500},stupid={time=250}}local c=function(d,e)local f=promise.new()export:Circle(function(g)return f:resolve(g)end,d,e)return Citizen.Await(f)end;Client.SkillCheck=function(h,i,j)i=i or"easy"j=j or 1;return c(j,b[i].time or 1000)end
