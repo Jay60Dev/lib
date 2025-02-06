@@ -1,0 +1,1 @@
+local a,b=Shared.UseResource()if not a then return end;Client.Keys=Client.Keys or{}Client.Keys.Give=function(c,d)if not DoesEntityExist(d)then return end;return b:GiveKeys(d)end;Client.Keys.Remove=function(c,d)if not DoesEntityExist(d)then return end;return b:RemoveKeys(d)end;Client.Keys.Has=function(c,d)if not DoesEntityExist(d)then return end;return b:HaveKeys(d)end

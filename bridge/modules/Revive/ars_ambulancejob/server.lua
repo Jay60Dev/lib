@@ -1,0 +1,1 @@
+local a=Shared.UseResource()if not a then return end;Server.Revive=function(b,c)TriggerClientEvent('ars_ambulancejob:healPlayer',c,{revive=true,heal=true})end

@@ -1,0 +1,1 @@
+Shared.Math=Shared.Math or{}Shared.Math.Clamp=function(a,b,c,d)return math.min(math.max(b,c),d)end;Shared.Math.GetPercentage=function(a,b,e)return b/e*100 end;Shared.Math.GetPercentageOf=function(a,b,f)return f/100*b end

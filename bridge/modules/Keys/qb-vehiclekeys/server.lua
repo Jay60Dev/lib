@@ -1,0 +1,1 @@
+local a,b=Shared.UseResource()if not a then return end;Server.Keys=Server.Keys or{}Server.Keys.Give=function(c,d,e)b:GiveKeys(d,Server.GetPlate(c,e))end;Server.Keys.Remove=function(c,d,e)b:RemoveKeys(d,Server.GetPlate(c,e))end;Server.Keys.Has=function(c,d,e)return b:HasKeys(d,Server.GetPlate(c,e))end

@@ -1,0 +1,1 @@
+Server.Time=Server.Time or{}Server.Time.GetDifferenceServer=function(a,b,c)if b=="now"or b==true then b=os.time()end;local d=os.difftime(c,b)return{week=math.floor(d/(60*60*24*7)),day=math.floor(d%(60*60*24*7)/(60*60*24)),hour=math.floor(d%(60*60*24)/(60*60)),minute=math.floor(d%(60*60)/60),totaldays=math.floor(d/(60*60*24))}end

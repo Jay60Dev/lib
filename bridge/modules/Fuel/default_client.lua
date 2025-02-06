@@ -1,0 +1,1 @@
+Client.Fuel=Client.Fuel or{}Client.Fuel.Get=function(a,b)Shared.MissingResource()end;Client.Fuel.Set=function(a,b,c)Shared.MissingResource()end

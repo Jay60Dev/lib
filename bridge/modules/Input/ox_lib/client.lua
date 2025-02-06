@@ -1,0 +1,1 @@
+local a=Shared.UseResource()if not a then return end;Client.Input=function(b,c,d)for e=1,#d do local f=d[e]if not Client.SupportedInputOption(nil,f.type)then Client.NotSupportedInputType(f.type)end end;local g=lib.inputDialog(c,d)if not g then return false end;return g end

@@ -1,0 +1,1 @@
+local a=Shared.UseResource()if not a then return end;if IsServer then Server.Notify=function(b,c,d,e,f)TriggerClientEvent('QBCore:Notify',c,d,e,f)end else Client.Notify=function(b,d,e,f)TriggerEvent('QBCore:Notify',d,e,f)end end

@@ -1,0 +1,1 @@
+Client.SetClipboard=function(a,b)if not b then return end;SendNUIMessage({module="Clipboard",action="copy",text=b,resource=a})end;RegisterNUICallback("copied",function(c,d)d({})if not c.status or not c.status=="copied"then return end;Client.Notify("lib","Copied to clipboard")end)

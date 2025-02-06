@@ -1,0 +1,1 @@
+local a=Shared.UseResource()if not a then return end;Client.Fuel=Client.Fuel or{}Client.Fuel.Get=function(b,c)if not DoesEntityExist(c)then return end;return Entity(c).state.fuel end;Client.Fuel.Set=function(b,c,d)if not DoesEntityExist(c)then return end;Entity(c).state.fuel=d;return Entity(c).state.fuel end

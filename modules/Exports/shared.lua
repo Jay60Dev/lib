@@ -1,0 +1,1 @@
+Shared.CheckExport=function(a,b,c)local d=pcall(function()return exports[b][c]end)return d end

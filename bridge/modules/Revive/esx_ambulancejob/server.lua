@@ -1,0 +1,1 @@
+local a=Shared.UseResource()if not a then return end;Server.Revive=function(b,c)TriggerClientEvent('esx_ambulancejob:revive',c)end

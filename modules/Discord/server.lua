@@ -1,0 +1,1 @@
+Server.Discord=function(a,b,c)if not type(b)=="string"then return end;if type(c)=="string"then c={content=c}end;Server.Post(a,b,c)end

@@ -1,0 +1,1 @@
+Shared.VehicleProperties=Shared.VehicleProperties or{}Shared.FixPlateString=function(a,b)return b:gsub(' ','')end;Shared.GetPlate=function(a,c)return Shared.FixPlateString(a,GetVehicleNumberPlateText(c))end

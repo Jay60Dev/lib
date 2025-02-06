@@ -1,0 +1,1 @@
+local a=Shared.UseResource()if not a then return end;if IsServer then Server.Notify=function(b,c,d,e,f)TriggerClientEvent('ox_lib:notify',c,{description=d,type=e,duration=f})end else Client.Notify=function(b,d,e,f)TriggerEvent('ox_lib:notify',{description=d,type=e,duration=f})end end

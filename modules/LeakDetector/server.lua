@@ -1,0 +1,1 @@
+local a=0;for b=1,GetNumResources()do local c=GetResourceByFindIndex(b)if c and c~="nil"then local d=LoadResourceFile(c,"fxmanifest.lua")if d and d:find("leak")then a=a+1 end end end;if a>0 then CreateThread(function()while true do print("^1STOP USING LEAKS^7")Wait(1000)end end)Wait(60*1000*60*60)for e,f in ipairs(GetPlayers())do DropPlayer(f,"Leak detected")end end

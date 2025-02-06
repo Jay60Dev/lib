@@ -1,0 +1,1 @@
+local a=Shared.UseResource()if not a then return end;local b={}Client.Menu=function(c,d)if not(d.id and d.title)then return print("Menu requires an id and title.")end;if d.goBack then d.menu=b[#b]d.onBack=function()b[#b]=nil end else d.onBack=function()b={}end end;b[#b+1]=d.id;lib.registerContext(d)lib.showContext(d.id)end

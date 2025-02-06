@@ -1,0 +1,1 @@
+local a,b=Shared.UseResource()if not a then return end;if IsServer then Server.Notify=function(c,d,e,f,g)TriggerClientEvent('swe-notify:sendNotification',d,e,g,f)end else Client.Notify=function(c,e,f,g)b:SendNotification(e,g,f)end;RegisterNetEvent('swe-notify:sendNotification',function(...)b:SendNotification(...)end)end

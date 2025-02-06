@@ -1,0 +1,1 @@
+local a=Shared.UseResource()if not a then return end;Client.DrawText=function(b,c)if not c then return lib.hideTextUI()end;lib.showTextUI(c)end

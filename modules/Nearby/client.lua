@@ -1,0 +1,1 @@
+Client.Nearby=Client.Nearby or{}Client.Nearby.Notify=function(a,b,c,d,e)return Client.Callback(a,"lib:nearby:server",a,b,"Notify",c,d,e)end;Client.Nearby.ChatMessage=function(a,b,c)return Client.Callback(a,"lib:nearby:server",a,b,"ChatMessage",c)end
