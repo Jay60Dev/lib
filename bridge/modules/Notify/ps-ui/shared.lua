@@ -1,0 +1,1 @@
+local a=Shared.UseResource()if not a then return end;if IsServer then Server.Notify=function(b,c,d,e,f)TriggerClientEvent('ps-ui:Notify',c,d,e,f)end else Client.Notify=function(b,d,e,f)TriggerEvent('ps-ui:Notify',d,e,f)end end

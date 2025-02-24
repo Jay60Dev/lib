@@ -1,0 +1,9 @@
+{
+    "none": 0,
+    "pureblack": 1,
+    "darksmoke": 2,
+    "lightsmoke": 3,
+    "stock": 4,
+    "limo": 5,
+    "green": 6
+}

@@ -1,0 +1,1 @@
+Client.Menu=function(a,b)Shared.MissingResource()end
