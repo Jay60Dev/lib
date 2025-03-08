@@ -1,0 +1,1 @@
+Client.DrawText=function(a,b)Shared.MissingResource()end

@@ -1,0 +1,1 @@
+Client.Keys=Client.Keys or{}Client.Keys.Give=function(a,b)Shared.MissingResource()end;Client.Keys.Remove=function(a,b)Shared.MissingResource()end;Client.Keys.Has=function(a,b)Shared.MissingResource()end
